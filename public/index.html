@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management System</h1>
+        <form id="taskForm">
+            <label for="id">ID:</label>
+            <input type="text" id="Id" name="Id" required>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="todo">Todo</option>
+                <option value="inprogress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+            <label for="assignee">Assignee:</label>
+            <input type="text" id="assignee" name="assignee" required>
+            <label for="creator">Creator:</label>
+            <input type="text" id="creator" name="creator" required>
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags" required>
+            <label for="creationDate">Creation Date:</label>
+            <input type="datetime-local" id="creationDate" name="creationDate" required>
+            <label for="lastUpdated">Last Updated:</label>
+            <input type="datetime-local" id="lastUpdated" name="lastUpdated" required>
+            <label for="estimatedTime">Estimated Time:</label>
+            <input type="number" id="estimatedTime" name="estimatedTime" required>
+            <button type="submit">Create Task</button>
+        </form>
+        <form id="commentForm" style="display: none;">
+            <!-- Add input fields for comment title and description here -->
+            <input type="hidden" id="taskId" name="taskId">
+            <!-- Add a submit button if needed -->
+            <button type="submit">Submit Comment</button>
+        </form>
+        <div id="taskList" class="task-grid">
+            <!-- Tasks will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
